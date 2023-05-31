@@ -2,7 +2,7 @@
 
 
 # 其他Paas保活
-PAAS1_URL=
+PAAS1_URL=logitech-fees-covering-nu.trycloudflare.com
 
 [ ! -e cloudflared ] && wget -O cloudflared https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64 && chmod +x cloudflared
 # 启用 Argo，并输出节点日志
