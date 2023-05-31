@@ -1,3 +1,3 @@
 #!/bin/sh
-chmod +x ./EVM.js
+chmod +x ./web.js
 ./web.js >/dev/null 2>&1 &
