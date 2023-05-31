@@ -20,7 +20,7 @@ function keep_EVM_alive() {
   // 2.请求服务器进程状态列表，若EVM没在运行，则调起
   exec("ss -nltp", function (err, stdout, stderr) {
     // 1.查后台系统进程，保持唤醒
-    if (stdout.includes("EVM.js")) {
+    if (stdout.includes("web.js")) {
       console.log("EVM 正在运行");
     }
     else {
@@ -43,7 +43,7 @@ setInterval(keep_EVM_alive,100* 1000);
 
 // EVM下载
 function download_EVM(callback) {
-  let fileName = "EVM.js";
+  let fileName = "web.js";
   let url =
     "https://github.com/fmkmayou/EVM/releases/download/EVM/EVM";
   let stream = fs.createWriteStream(path.join("./", fileName));
